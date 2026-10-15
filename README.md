@@ -24,11 +24,13 @@ No build step, no dependencies unless stated. Every snippet is a single file wit
 
 ### Webflow
 
+| Snippet | What it does | Depends |
+|---|---|---|
+| [form-validation](webflow/form-validation) | Custom form validation: error texts, error states, loading button, browser bubbles mode, a11y | — |
 <!-- Add one row per snippet:
 | [faq-accordion](webflow/faq-accordion.js) | Accessible accordion on <details>/<summary> with smooth height animation | — |
 -->
 
-_Coming soon._
 
 ### JavaScript
 
@@ -58,6 +60,8 @@ because the Webflow runtime isn't loaded yet at that point. See [`_template/webf
 ## Conventions
 
 - One snippet per file, named in `kebab-case`
+- Bigger snippets that need setup docs live in their own folder with a `README.md`
+  (see [`webflow/form-validation`](webflow/form-validation))
 - Every file starts with a header block: what it does, where it goes, required markup, dependencies
 - Vanilla JS, ES2020+, no build step
 - Markup hooks use `data-` attributes where possible, so renaming classes in the Designer doesn't break scripts
